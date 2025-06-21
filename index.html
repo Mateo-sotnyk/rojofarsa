@@ -1,46 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mi Tienda</title>
-  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/styles/styles.css" />
   <script src="https://unpkg.com/feather-icons"></script>
-
 </head>
+
 <body>
+  <header class="topbar">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#">Nuevo</a></li>
+        <li><a href="#">Accesorios</a></li>
+        <li><a href="#">Mujer</a></li>
+        <li><a href="#">Hombre</a></li>
+      </ul>
+    </nav>
 
-    <header class="topbar">
-  <nav class="sidebar">
-    <ul>
-      <li><a href="#">Nuevo</a></li>
-      <li><a href="#">Accesorios</a></li>
-      <li><a href="#">Mujer</a></li>
-      <li><a href="#">Hombre</a></li>
-    </ul>
-  </nav>
+    <div class="top-icons">
+      <a href="#search" title="Buscar"><i data-feather="search"></i></a>
+      <a href="#direccion" title="Ubicación"><i data-feather="map-pin"></i></a>
+      <a href="#" title="Contacto"><i data-feather="user"></i></a>
+      <a href="#" title="Carrito"><i data-feather="shopping-cart"></i></a>
+    </div>
+  </header>
 
- <div class="top-icons">
-  <a href="#" title="Buscar"><i data-feather="search"></i></a>
-  <a href="#" title="Ubicación"><i data-feather="map-pin"></i></a>
-  <a href="#" title="Contacto"><i data-feather="user"></i></a>
-  <a href="#" title="Carrito"><i data-feather="shopping-cart"></i></a>
+<div id="search-container" class="hidden">
+  <input type="text" id="search-input" placeholder="Buscar...">
+  <button id="search-button" title="buscar">
+  <i data-feather="search"></i>
+  </button>
 </div>
 
-</header>
 
-  <section class="hero"></section>
+  <div class="hero"></div>
+  <div class="hero-espaciador"></div>
 
   <section class="categorias">
     <a href="#" class="categoria">
-      <img src="assets/remeras.png" alt="Remeras">
+      <img src="assets/remeras.png" alt="Remeras" />
+      <div class="categoria-titulo">
       <h2>Remeras</h2>
+      </div>
     </a>
     <a href="#" class="categoria">
-      <img src="assets/buzos.png" alt="Buzos">
-      <h2>Buzos</h2>
+      <img src="assets/buzos.png" alt="Buzos" />
+      <div class="categoria-titulo">
+        <h2>Buzos</h2>
+      </div>
     </a>
   </section>
+
+  <section id="direccion" style="padding: 40px; background: #f5f5f5; text-align: center;">
+  <h2>Ubicación</h2>
+  <p>Estadio de boca</p>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4039.328427825384!2d-58.367325859120555!3d-34.63561087305548!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b6925e5473%3A0x1ca5b2748858b40d!2sEstadio%20Alberto%20J.%20Armando!5e1!3m2!1ses!2sar!4v1750543497597!5m2!1ses!2sar" 
+  width="600"
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+
+<div id="contact-menu" class="contact-menu hidden">
+
+  <ul>
+    <li><a href="tel:+541123456789">Teléfono: +54 9 11 2345-6789</a></li>
+    <li><a href="https://instagram.com/mateestk" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+    <li><a href="https://twitter.com/mateestk" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+  </ul>
+  <button id="contact-close">Cerrar</button>
+</div>
+
+
 
   <script src="app.js"></script>
 </body>
